@@ -20,24 +20,29 @@ public class GoogleAdvancedSearchTest {
     }
 
     @Test
-    public void advancedSearch() {
+    public void advancedSearchTest() {
 
         webDriver.get("https://www.google.com/advanced_search");
 
         GoogleAdvancedSearch googleAdvancedSearch = new GoogleAdvancedSearch(webDriver);
+
         googleAdvancedSearch.inputAllWords("Automation");
         googleAdvancedSearch.inputExactWord("Java");
         googleAdvancedSearch.inputAnyOfWords("Selenium");
         googleAdvancedSearch.inputNoneOfWords("Games");
         googleAdvancedSearch.inputNumber("1", "100");
+
         googleAdvancedSearch.selectLanguage();
         googleAdvancedSearch.selectRegion();
         googleAdvancedSearch.selectLastUpdate();
+
         googleAdvancedSearch.inputDomain("https://java.com/");
+
         googleAdvancedSearch.selectTermsAppearing();
         googleAdvancedSearch.selectFileType();
         googleAdvancedSearch.selectUsageRights();
         googleAdvancedSearch.clickAdvancedSearchButton();
 
+        webDriver.close();
     }
 }

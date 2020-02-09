@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="AdvancedSearch">
+<suite name="CodeExample">
     <test name="AdvancedSearch">
         <classes>
             <class name="com.omakarovych.tests.GoogleAdvancedSearchTest"></class>
         </classes>
     </test>
 
-<!--    <test name="">-->
-<!--        <classes>-->
-<!--            <class name="com.omakarovych..tests."></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TestAndQuiz">
+        <classes>
+            <class name="com.omakarovych.tests.TestAndQuizTest"></class>
+        </classes>
+    </test>
 
 </suite>
 
