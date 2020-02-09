@@ -14,7 +14,7 @@ public class GoogleAdvancedSearchTest {
 
     @BeforeTest
     public void beforeTest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\Chromdriver\\chromedriver.exe");
+
         webDriver = new ChromeDriver();
 
     }

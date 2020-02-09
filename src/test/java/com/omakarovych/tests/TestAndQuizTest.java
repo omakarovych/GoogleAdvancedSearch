@@ -15,7 +15,7 @@ public class TestAndQuizTest {
 
     @BeforeTest
     public void beforeTest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\Chromdriver\\chromedriver.exe");
+
         driver = new ChromeDriver();
 
     }
