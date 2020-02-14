@@ -1,11 +1,11 @@
 package com.omakarovych.tests;
 
 import com.omakarovych.TestAndQuiz;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,11 +13,21 @@ public class TestAndQuizTest {
 
     private WebDriver driver;
 
+    private final String chromeVersion = "80.0.3987.106";
+
     @BeforeTest
     public void beforeTest() {
 
-        driver = new ChromeDriver();
+    ChromeDriverManager.getInstance().version(chromeVersion).setup();
+    driver = new ChromeDriver();
+    }
 
+
+    @AfterTest
+    public void afterClass(){
+        try {
+            driver.close();
+        } catch (Exception ex){}
     }
 
     @Test
